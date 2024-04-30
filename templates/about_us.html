@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our team</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='cv_int.css') }}">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .photo-frame {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .photo-frame img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .photo-frame {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+              <h1>Jobify</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="gallery">
+  <div class="photo-frame">
+    <img src="{{ url_for('static', filename='images/dr-gulsher.jpg') }}" alt="Dr. Gulsher">
+    <div class="description">
+        <strong>Dr. Gulsher:</strong> Coordinator of the Department of Electrical Engineering at Sukkur IBA University.<br>
+        Contributed significantly in idea generation and implementation.
+    </div>
+  </div>
+
+  <div class="photo-frame">
+    <img src="{{ url_for('static', filename='images/jawad.jpg') }}" alt="Jawad">
+    <div class="description">
+        <strong>Jawad:</strong> Bachelor of Electrical Engineering student at Sukkur IBA University.<br>
+        Main role in development and submission.
+    </div>
+  </div>
+
+  <div class="photo-frame">
+    <img src="{{ url_for('static', filename='images/imtiaz.jpg') }}" alt="Imtiaz">
+    <div class="description">
+        <strong>Imtiaz:</strong> Final year student of Electrical Engineering at Sukkur IBA University. Contributed in Idea, Video representation,  and  research.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+              <h1>Jobify</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/about_us">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>Job Search</h2>
+    <form action="/get_jobs" method="post" enctype="multipart/form-data">
+        <label for="keyword">Keyword:</label>
+        <input type="text" id="keyword" name="keyword" required><br><br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

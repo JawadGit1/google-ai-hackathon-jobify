@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Prepration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+              <h1>Jobify</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/about_us">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>CV Suggestions</h2>
+    <form id="cvForm" action="/submit" method="post" enctype="multipart/form-data">
+        <label for="cv_file">CV PDF File:</label><br>
+        <input type="file" id="cv_file" name="cv_file"><br><br>
+
+        <label for="job_description">Job Description:</label><br>
+        <textarea id="job_description" name="job_description" rows="20" cols="75"></textarea><br><br>
+
+        <input type="submit" name="suggestion" value="Get CV Suggestion" onclick="submitForm('/get_cv_suggestion')" class="button">
+    </form>
+
+    <script>
+        function submitForm(action) {
+            document.getElementById('cvForm').action = action;
+        }
+    </script>
+</body>
+</html>

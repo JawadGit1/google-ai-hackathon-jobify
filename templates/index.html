@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .service-box {
+            background:#1D73D6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 141px;
+
+        }
+
+        .service-box:hover{
+        transform: translateY(-5px);
+        }
+
+        .service-title {
+            font-weight: bold;
+            color: white;
+        }
+        .service_des{
+            color: white;
+        }
+        .redirect{
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <header>
+           <div class="container">
+              <div class="logo">
+                 <h1>Jobify</h1>
+              </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="/about_us">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+    <h1>These are our services</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="service-box">
+                <h2 class="service-title">CV Customization</h2>
+                <p class="service_des">Get suggestions to make effect CV for particular job</p>
+                <a href="/suggestion" class="redirect">Try it!</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-box">
+                <h2 class="service-title">Interview Prep</h2>
+                <p class="service_des">Get expected Job Interview question of specific job</p>
+                <a href="/interview" class="redirect">Try it!</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-box">
+                <h2 class="service-title">Job Search</h2>
+                <p class="service_des">Search jobs based on your role and location</p>
+                <a href="/search_jobs" class="redirect">Try it!</a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Suggestions</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='cv_int.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+              <h1>Jobify</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/about_us">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>CV Customization Suggestions for this Job</h2>
+    <pre>{{ response }}</pre>
+    <form action="/generate_doc" method="post">
+        <input type="hidden" name="text" value="{{ response }}">
+        <button class="btn" type="submit">Generate Word File</button>
+    </form>
+</body>
+</html>

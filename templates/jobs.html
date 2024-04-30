@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='job.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+              <h1>Jobify</h1>
+            </div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/about_us">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="containerr">
+        <h1>Job Search Results</h1>
+        <ul>
+            {% for job in jobs %}
+            <li>
+                <h2>Job title: {{ job['title'] }}</h2>
+                <p>Company: {{ job['company'] }}</p>
+                <p>Location: {{ job['location']}}</p>
+                <p>employmentType: {{ job['employmentType']}}</p>
+                <p>Job description: {{ job['description'] }}</p>
+                <button onclick="openJobLink('{{ job['jobProviders'][0].get('url') }}')" class="butn">Open Link</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        function openJobLink(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

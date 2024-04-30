@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif; /* or any font you're using for Jobify */
+  background-color: #f4f4f4; /* adjust the color to match your site */
+  color: #333; /* standard text color, adjust as needed */
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 100%;
+  margin-top: 50px; /* or the amount of space you need from the top */
+  flex-wrap: wrap;
+  background-color: #fff; /* background of your service cards */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* to add a subtle shadow */
+}
+
+.photo-frame {
+  border: none; /* removing the border */
+  padding: 20px;
+  text-align: center;
+  width: 30%; /* Adjusted for consistent spacing */
+  margin: 1%; /* Add some margin around the boxes */
+  box-sizing: border-box;
+  background-color: #007bff; /* Adjust to match the blue of your site */
+  border-radius: 10px; /* Rounded corners */
+  color: #fff; /* text color for the services */
+  transition: transform 0.3s ease; /* smooth transition for hover effect */
+}
+
+.photo-frame:hover {
+  transform: translateY(-5px); /* slight raise effect on hover */
+}
+
+.photo-frame img {
+  display: none; /* hiding images */
+}
+
+.description {
+  font-size: 1em; /* Adjust font size as needed */
+  margin-top: 20px; /* Space from the top of the card */
+  padding: 0; /* No need for padding here, already in the photo-frame */
+  overflow: auto;
+  text-align: center; /* Center align text */
+}
+
+.photo-frame a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff; /* Background color for the button */
+  color: #007bff; /* Text color for the button */
+  text-decoration: none; /* Remove underline from links */
+  border-radius: 5px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.photo-frame a:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  color: #fff; /* Text color change on hover */
+}
+
+@media (max-width: 768px) {
+  .photo-frame {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
