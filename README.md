@@ -16,10 +16,10 @@ This Flask application is designed to help jobseekers in getting suitable job. D
   
 ## Installation
 Use these pip commands:
-pip install flask
-pip install google.generativeai
-pip install PyMuPDF
-pip install python-docx
+- pip install flask
+- pip install google.generativeai
+- pip install PyMuPDF
+- pip install python-docx
 
 
 ### Setup
