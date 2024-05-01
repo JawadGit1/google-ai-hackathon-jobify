@@ -24,7 +24,8 @@ Use these pip commands:
 
 ### Setup
 - download the code
-- select venv as interpreter or enter pip commands given above.
+- Enter pip commands given above.
+- If there's any error check requirements.txt
 
 
 ## Usage
