@@ -9,17 +9,18 @@ This Flask application is designed to help jobseekers in getting suitable job. D
 - CV customization suggestions for particular job (Better ATS score)
 - Interview Prepration/ Mock interview
 
+### Prerequisites
+- Python 3.10 or newer
+- pip
+
+  
 ## Installation
-Virtual enviroment venv is created, but if you don't want to use it here are pip commands:
+Use these pip commands:
 pip install flask
 pip install google.generativeai
 pip install PyMuPDF
 pip install python-docx
 
-
-### Prerequisites
-- Python 3.10 or newer
-- pip
 
 ### Setup
 - download the code
